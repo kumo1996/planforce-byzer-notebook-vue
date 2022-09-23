@@ -63,10 +63,10 @@ export default class Login extends Vue {
   setUsernameToForm () {
     const { query }= this.$route
     console.log(this.user,'user')
-    if (query.username && !this.user.username) {
+    // if (query.username && !this.user.username) {
       this.user.username = query.username
       this.user.password = query.password
-    }
+    // }
   }
 
   get rules () {
