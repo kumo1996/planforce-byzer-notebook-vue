@@ -47,8 +47,8 @@ export default class Login extends Vue {
   loadingLogin = false
   loadingSign = false
   user = {
-    username: '',
-    password: ''
+    username: 'admin',
+    password: 'admin'
   }
   showSignUp = true
   @Watch('$route')
@@ -63,10 +63,10 @@ export default class Login extends Vue {
   setUsernameToForm () {
     const { query }= this.$route
     console.log(this.user,'user')
-    // if (query.username && !this.user.username) {
+    if (query.username && !this.user.username) {
       this.user.username = query.username
       this.user.password = query.password
-    // }
+    }
   }
 
   get rules () {
