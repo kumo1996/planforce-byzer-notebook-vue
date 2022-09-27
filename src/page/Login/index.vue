@@ -58,7 +58,7 @@ export default class Login extends Vue {
 
   mounted () {
     this.setUsernameToForm()
-    this.submitSignUp()
+    this.checkForm()
   }
 
   setUsernameToForm () {
