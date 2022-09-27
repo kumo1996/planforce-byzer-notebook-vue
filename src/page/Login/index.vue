@@ -60,7 +60,7 @@ export default class Login extends Vue {
     this.setUsernameToForm()
     setTimeout(()=>{
       this.submitLogin()
-    }, 200)
+    },)
   }
 
   setUsernameToForm () {
