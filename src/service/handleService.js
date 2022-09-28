@@ -24,21 +24,20 @@ instance.interceptors.response.use(
       return response.data
     }
   },
-  error => {
-    if (error.response) {
-      switch (error.response.status) {
-        case 401:
-          store.commit(actionsTypes.HIDE_ALL_MODALS)
-          store.commit(actionsTypes.CLEAR_USER_INFO)
-          router.push({name: 'login'})
-      }
-    }
-    const result = error.response.data
-    const message = result && result.msg || 'Unknow Error'
-    window.NotebookVue.$message.error(message)
-    return Promise.reject(error.response)
-  }
+  // error => {
+  //   if (error.response) {
+  //     switch (error.response.status) {
+  //       case 401:
+  //         store.commit(actionsTypes.HIDE_ALL_MODALS)
+  //         store.commit(actionsTypes.CLEAR_USER_INFO)
+  //         router.push({name: 'login'})
+  //     }
+  //   }
+  //   const result = error.response.data
+  //   const message = result && result.msg || 'Unknow Error'
+  //   window.NotebookVue.$message.error(message)
+  //   return Promise.reject(error.response)
+  // }
 )
- 
+
  export default instance
- 
